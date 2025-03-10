@@ -17,12 +17,13 @@ class Level:
         ducks = [DuckFactory.create_duck() for _ in range(3)]  # Cria 5 patos
         score = 0
         lives = 3  # O jogador começa com 3 vidas
-        clock = pg.time.Clock()
+        self.surf = pg.image.load('./assets/BgLevel1.png')
+        self.rect = self.surf.get_rect(left=0, top=0)
         running = True
 
         while running:
                 screen.fill((255, 255, 255))  # Limpa a tela
-
+                self.window.blit(self.surf, self.rect)
                 # Loop de eventos
                 for event in pg.event.get():
                     if event.type == pg.QUIT:
