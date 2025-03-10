@@ -18,8 +18,6 @@ W_WIDTH  = 800
 
 FPS = 60
 
-
-
 MENU_OPTION = ['START GAME', 
                 'SCORE',
                 'EXIT']
