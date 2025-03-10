@@ -1,5 +1,5 @@
 import pygame as pg
-from const import C_BLUE, C_GREEN, C_RED, MENU_OPTION, W_WIDTH
+from Game_code.const import C_BLUE, C_GREEN, C_RED, MENU_OPTION, W_WIDTH
 
 class Menu:
     def __init__(self, window):

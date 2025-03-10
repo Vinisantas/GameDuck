@@ -1,4 +1,8 @@
-from Game import Game
+
+
+
+
+from Game_code.Game import Game
 
 
 game = Game()

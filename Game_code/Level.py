@@ -1,5 +1,5 @@
 import pygame as pg
-from DucksFactory import DuckFactory
+from Game_code.DucksFactory import DuckFactory
 
 
 
@@ -14,7 +14,7 @@ class Level:
 
 
     def run(self, screen):
-        ducks = [DuckFactory.create_duck() for _ in range(5)]  # Cria 5 patos
+        ducks = [DuckFactory.create_duck() for _ in range(3)]  # Cria 5 patos
         score = 0
         lives = 3  # O jogador começa com 3 vidas
         clock = pg.time.Clock()
