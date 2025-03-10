@@ -1,4 +1,6 @@
 import pygame as pg
+
+from Game_code.GameOver import  Gameover
 from Game_code.DucksFactory import DuckFactory
 
 
@@ -62,7 +64,9 @@ class Level:
                 # Verifica se o jogador perdeu todas as vidas
                 if lives <= 0:
                     running = False
-                    print("Game Over! Você perdeu todas as vidas.")
+                    game_over_screen = Gameover(self.window) 
+                    game_over_screen.run()  # Exibe a tela de "Game Over"
+
 
                 # Atualiza a tela
                 pg.display.update()
