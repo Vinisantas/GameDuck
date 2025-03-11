@@ -1,5 +1,5 @@
 import pygame as pg
-from Game_code.const import C_BLUE, C_GREEN, C_RED, MENU_OPTION, W_WIDTH
+from Game_code.const import C_BLACK, C_BLUE, C_GREEN, MENU_OPTION, W_WIDTH
 
 class Menu:
     def __init__(self, window):
@@ -14,14 +14,13 @@ class Menu:
         pg.mixer.music.play(-1)
         while True:
             self.window.blit(self.surf, self.rect)
-            self.menu_text(text_size=50, text="Ducks", text_color=C_RED, text_center_pos=(W_WIDTH / 2, 70))
-            self.menu_text(text_size=50, text="Shooter", text_color=C_RED, text_center_pos=(W_WIDTH / 2, 120))
+            self.menu_text(text_size=50, text="Ducks Shooter", text_color=C_GREEN, text_center_pos=(W_WIDTH / 2, 70))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=C_GREEN, text_center_pos=(W_WIDTH / 2, 200 + 25 * i))
+                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=C_BLACK, text_center_pos=(W_WIDTH / 2, 300 + 25 * i))
                 else:
-                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=C_BLUE, text_center_pos=(W_WIDTH / 2, 200 + 25 * i))
+                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=C_GREEN, text_center_pos=(W_WIDTH / 2, 300 + 25 * i))
 
             for event in pg.event.get():
                 if event.type == pg.QUIT:
@@ -39,8 +38,8 @@ class Menu:
 
             pg.display.update()
 
-    def menu_text(self, text_size, text, text_color, text_center_pos):
+    def menu_text(self, text_size, text, text_color, text_center_pos ):
         text_font = pg.font.SysFont(name='Lucida Sans Typewriter', size=text_size)
-        text_suf = text_font.render(text, True, text_color).convert_alpha() #remova o color=
+        text_suf = text_font.render(text, True, text_color).convert_alpha()
         text_rect = text_suf.get_rect(center=text_center_pos)
         self.window.blit(text_suf, text_rect)
