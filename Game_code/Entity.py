@@ -12,7 +12,6 @@ class Entity(ABC):
         self.surf = pygame.image.load('./assets' + name + '.png')
         self.rect = self.surf.get_rect(left=position[0], top=position[1])
 
-    #METHODS IMPLEMENTS OF THE CHILDREN
-    @abstractmethod #decoretor
-    def move(self, ):
+    @abstractmethod 
+    def move(self):
         pass

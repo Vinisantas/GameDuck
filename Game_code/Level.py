@@ -16,7 +16,7 @@ class Level:
 
 
     def run(self, screen):
-        ducks = [DuckFactory.create_duck() for _ in range(3)]  # Cria 5 patos
+        ducks = [DuckFactory.create_duck() for _ in range(6)]  # Cria  patos
         score = 0
         lives = 3  # O jogador começa com 3 vidas
         self.surf = pg.image.load('./assets/BgLevel1.png')
@@ -54,6 +54,7 @@ class Level:
                         ducks.remove(duck)
                         ducks.append(DuckFactory.create_duck())  # Cria um novo pato
                         lives -= 1
+                        
 
                 # Desenha a mira
                 mouse_x, mouse_y = pg.mouse.get_pos()
